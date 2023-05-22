@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
   {
+    path: '',
+    redirectTo: '/encrypt',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: '/404',
     pathMatch: 'full'
